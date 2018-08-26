@@ -15,6 +15,13 @@ module.exports = {
 
   loading: { color: '#3B8070' },
 
+  sassResources: ['@/assets/styles/mixins.scss'],
+
+  css: [
+    'bootstrap/scss/bootstrap-reboot.scss',
+    'bootstrap/scss/bootstrap-grid.scss',
+  ],
+
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
