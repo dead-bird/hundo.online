@@ -1,11 +1,15 @@
 <script>
-export default {};
+import Loader from '~/components/Loader';
+
+export default {
+  components: { Loader },
+};
 </script>
 
 <template>
-  <h1>
-    hundo
-  </h1>
+  <div class="container-fluid">
+    <Loader />
+  </div>
 </template>
 
 
