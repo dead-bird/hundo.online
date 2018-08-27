@@ -8,11 +8,18 @@ export default {
 
 <template>
   <div class="container-fluid">
-    <Loader />
+    <!-- <Loader /> -->
+    <img src="/hundo.svg" alt="">
   </div>
 </template>
 
 
-<style>
+<style scoped>
+img {
+  width: 70vw;
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+}
 </style>
 
