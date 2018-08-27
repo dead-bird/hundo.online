@@ -13,7 +13,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  loading: { color: '#3B8070' },
+  loading: { color: '#bb1a34' },
 
   sassResources: ['@/assets/styles/mixins.scss'],
 
