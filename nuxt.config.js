@@ -8,11 +8,6 @@ module.exports = {
         name: 'description',
         content: 'Information about the Hundo Discord bot',
       },
-      {
-        hid: 'title',
-        name: 'title',
-        content: 'Rosebella | Neckwear, Wristwear & Earrings',
-      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#bb1a34' },
       { name: 'theme-color', content: '#ffffff' },
