@@ -1,15 +1,15 @@
 <script>
-import Loader from '~/components/Loader';
+import Grid from '~/components/Grid';
 
 export default {
-  components: { Loader },
+  components: { Grid },
 };
 </script>
 
 <template>
   <div class="container-fluid">
-    <!-- <Loader /> -->
-    <img src="/hundo.svg" alt="">
+    <Grid />
+    <!-- <img src="/hundo.svg" alt=""> -->
   </div>
 </template>
 
