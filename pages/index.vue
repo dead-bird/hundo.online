@@ -1,9 +1,10 @@
 <script>
 import Grid from '~/components/Grid';
 import Swipe from '~/components/Swipe';
+import Stats from '~/components/Stats';
 
 export default {
-  components: { Grid, Swipe },
+  components: { Grid, Swipe, Stats },
 };
 </script>
 
@@ -11,6 +12,7 @@ export default {
   <div class="container-fluid">
     <Grid />
     <Swipe />
+    <Stats />
     <!-- <img src="/hundo.svg" alt=""> -->
   </div>
 </template>
