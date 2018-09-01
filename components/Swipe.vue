@@ -16,6 +16,7 @@ export default {};
   background-color: #bb1a34;
   animation: swipe 1.5s 1s;
   transform: translateX(-100%);
+  z-index: 1;
 }
 
 @keyframes swipe {

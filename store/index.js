@@ -1,23 +1,14 @@
-import axios from 'axios';
-
 export const state = () => ({
   triggers: [],
+  loading: true,
 });
 
 export const mutations = {
   setContent(state, triggers) {
     state.triggers = triggers;
   },
-};
 
-export const actions = {
-  nuxtServerInit: ({ commit }) =>
-    axios
-      .get('http://api.hundo.online')
-      .then(res => {
-        commit('setContent', res.data);
-      })
-      .catch(e => console.log(e)),
+  setLoading(state, mode) {
+    state.loading = mode;
+  },
 };
-
-export const getters = {};

@@ -1,10 +1,18 @@
 <script>
+import axios from 'axios';
 import Grid from '~/components/Grid';
 import Swipe from '~/components/Swipe';
-import Stats from '~/components/Stats';
+import Info from '~/components/Info';
+import Disclaimer from '~/components/Disclaimer';
 
 export default {
-  components: { Grid, Swipe, Stats },
+  components: { Grid, Swipe, Info, Disclaimer },
+
+  async fetch({ store }) {
+    const { data } = await axios.get('http://api.hundo.online');
+
+    store.commit('setContent', data);
+  },
 };
 </script>
 
@@ -12,8 +20,8 @@ export default {
   <div class="container-fluid">
     <Grid />
     <Swipe />
-    <Stats />
-    <!-- <img src="/hundo.svg" alt=""> -->
+    <Info />
+    <Disclaimer />
   </div>
 </template>
 
@@ -21,13 +29,6 @@ export default {
 <style scoped>
 .container-fluid {
   position: relative;
-}
-
-img {
-  width: 70vw;
-  height: 100vh;
-  display: block;
-  margin: 0 auto;
 }
 </style>
 
