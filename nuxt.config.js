@@ -36,6 +36,8 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  mode: 'spa',
+
   modules: ['nuxt-sass-resources-loader'],
 
   loading: { color: '#bb1a34' },
