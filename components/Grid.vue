@@ -22,9 +22,9 @@ export default {
 <template>
   <transition name="grid">
     <div v-if="loading">
-      <div class="grid">
         <div class="row">
-          <Hundo v-for="trigger in triggers" :text="trigger.words" :key="trigger._id" class="grid-item col-sm-4 col-md-2" />
+      <div class="grid">
+          <Hundo v-for="trigger in triggers" :text="trigger.words" :key="trigger._id" class="grid-item col-sm-3 col-md-2" />
         </div>
       </div>
     </div>
@@ -34,14 +34,21 @@ export default {
 <style lang="scss">
 .grid {
   height: 100vh;
+  padding-bottom: 60px;
   overflow: hidden;
 }
 
 .grid-item {
-  height: 25vh;
+  height: 25%;
 
+  @include until($small) {
+    width: 50%;
+  }
+  @include until(400px) {
+    width: 100%;
+  }
   @include at-least($small) {
-    height: 16.6666666667vh;
+    height: 16.6666666667%;
   }
 }
 
