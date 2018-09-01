@@ -1,11 +1,18 @@
 <script>
 export default {
-  props: ['text'],
-
-  data: () => ({
-    width: 200,
-    height: 100,
-  }),
+  props: {
+    text: {
+      default: '',
+    },
+    height: {
+      type: Number,
+      default: 100,
+    },
+    width: {
+      type: Number,
+      default: 200,
+    },
+  },
 };
 </script>
 
