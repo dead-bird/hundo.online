@@ -20,13 +20,15 @@ export default {
 </script>
 
 <template>
-  <div v-if="loading">
-    <div class="grid">
-      <div class="row">
-        <Hundo v-for="trigger in triggers" :text="trigger.words" :key="trigger._id" class="grid-item col-sm-4 col-md-2" />
+  <transition name="grid">
+    <div v-if="loading">
+      <div class="grid">
+        <div class="row">
+          <Hundo v-for="trigger in triggers" :text="trigger.words" :key="trigger._id" class="grid-item col-sm-4 col-md-2" />
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <style lang="scss">
@@ -41,6 +43,15 @@ export default {
   @include at-least($small) {
     height: 16.6666666667vh;
   }
+}
+
+.grid-enter-active,
+.grid-leave-active {
+  transition: opacity 0.5s;
+}
+.grid-enter,
+.grid-leave-to {
+  opacity: 0;
 }
 </style>
 

@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <transition appear>
+  <transition name="stats">
     <div class="main" v-if="!loading">
       <img src="/hundo.svg" alt="">
       <Stats />
@@ -56,6 +56,15 @@ img {
     text-decoration: none;
     border-color: $red;
   }
+}
+
+.stats-enter-active,
+.stats-leave-active {
+  transition: opacity 0.5s 1.15s;
+}
+.stats-enter,
+.stats-leave-to {
+  opacity: 0;
 }
 </style>
 

@@ -1,9 +1,13 @@
 <script>
-export default {};
+import { mapState } from 'vuex';
+
+export default {
+  computed: mapState(['loading']),
+};
 </script>
 
 <template>
-  <div class="swipe"></div>
+  <div class="swipe" :class="{ active: !loading }"></div>
 </template>
 
 <style lang="scss">
@@ -14,9 +18,12 @@ export default {};
   top: 0;
   left: 0;
   background-color: #bb1a34;
-  animation: swipe 1.5s 1s;
   transform: translateX(-100%);
   z-index: 1;
+
+  &.active {
+    animation: swipe 1.5s;
+  }
 }
 
 @keyframes swipe {
