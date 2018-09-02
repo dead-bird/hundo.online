@@ -8,20 +8,14 @@ import Disclaimer from '~/components/Disclaimer';
 export default {
   components: { Grid, Swipe, Info, Disclaimer },
 
-  async fetch({ store }) {
-    const { data } = await axios.get('http://api.hundo.online');
-
-    store.commit('setContent', data);
+  beforeCreate() {
+    axios
+      .get('https://api.hundo.online')
+      .then(res => {
+        this.$store.commit('setContent', res.data);
+      })
+      .catch(e => console.log(e));
   },
-
-  // beforeCreate() {
-  //   axios
-  //     .get('http://api.hundo.online')
-  //     .then(res => {
-  //       this.$store.commit('setContent', res.data);
-  //     })
-  //     .catch(e => console.log(e));
-  // },
 };
 </script>
 
