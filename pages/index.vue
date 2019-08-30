@@ -10,7 +10,7 @@ export default {
 
   beforeCreate() {
     axios
-      .get('https://api.hundo.online')
+      .get('https://api.hundo.deadbird.dev')
       .then(res => {
         this.$store.commit('setContent', res.data);
       })
